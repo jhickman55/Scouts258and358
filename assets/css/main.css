@@ -1,22 +1,26 @@
 /* Troops 258 & 358 - Custom Styles */
+/* Nature-inspired theme: forest greens + burgundy scout accents */
 
-/* Override Bulma primary color to scout-appropriate blue */
 :root {
-  --scout-primary: #003f87;
-  --scout-primary-light: #1a5dab;
-  --scout-accent: #ce1126;
-  --scout-gold: #fcd116;
+  --scout-primary: #2e6b3e;         /* Forest green - like oak leaves */
+  --scout-primary-light: #3d8b51;   /* Lighter leaf green */
+  --scout-primary-dark: #1e4d2b;    /* Deep forest */
+  --scout-accent: #7b2d3b;          /* Burgundy - scout uniform */
+  --scout-accent-light: #9c3c4e;    /* Lighter burgundy */
+  --scout-gold: #d4a843;            /* Warm amber/gold - campfire */
+  --scout-cream: #f5f1e8;           /* Warm off-white - parchment */
+  --scout-bark: #2c2416;            /* Dark brown - tree bark */
 }
 
 /* Hero section */
 .hero.is-primary {
   background-color: var(--scout-primary);
-  background-image: linear-gradient(135deg, var(--scout-primary) 0%, var(--scout-primary-light) 100%);
+  background-image: linear-gradient(135deg, var(--scout-primary-dark) 0%, var(--scout-primary) 50%, var(--scout-primary-light) 100%);
 }
 
-/* Navbar */
+/* Navbar - dark bark brown */
 .navbar.is-dark {
-  background-color: #1a1a2e;
+  background-color: var(--scout-bark);
 }
 
 .navbar-item:hover,
@@ -24,10 +28,14 @@
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* Footer */
+.navbar-dropdown {
+  border-top: 2px solid var(--scout-primary);
+}
+
+/* Footer - dark bark brown to match navbar */
 .footer {
-  background-color: #1a1a2e;
-  color: #b0b0b0;
+  background-color: var(--scout-bark);
+  color: #b8af9e;
   padding: 3rem 1.5rem;
 }
 
@@ -36,7 +44,7 @@
 }
 
 .footer a {
-  color: #7eb8da;
+  color: var(--scout-gold);
 }
 
 .footer a:hover {
@@ -52,12 +60,18 @@
   margin-bottom: 0.5rem;
 }
 
+/* Light sections - warm parchment background */
+.has-background-light {
+  background-color: var(--scout-cream) !important;
+}
+
 /* Cards */
 .card {
   height: 100%;
   transition: box-shadow 0.2s ease;
   border-radius: 8px;
   overflow: hidden;
+  border-top: 3px solid var(--scout-primary);
 }
 
 .card:hover {
@@ -97,6 +111,24 @@
 /* Content images */
 .content img {
   border-radius: 8px;
+}
+
+/* Burgundy accent elements */
+.button.is-accent {
+  background-color: var(--scout-accent);
+  color: #ffffff;
+  border: none;
+}
+
+.button.is-accent:hover {
+  background-color: var(--scout-accent-light);
+  color: #ffffff;
+}
+
+/* Horizontal rules - subtle green */
+hr {
+  background-color: var(--scout-primary);
+  opacity: 0.3;
 }
 
 /* Responsive adjustments */

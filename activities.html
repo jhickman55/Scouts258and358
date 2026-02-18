@@ -1,0 +1,36 @@
+---
+layout: default
+title: Activities
+description: Recent activities, campouts, and events from Troops 258 & 358
+permalink: /activities/
+---
+
+<section class="section">
+  <div class="container">
+    <h1 class="title is-2">Activities</h1>
+    <p class="subtitle is-5">Recent events, campouts, and troop news</p>
+    <hr>
+
+    {% if site.posts.size > 0 %}
+      {% for post in site.posts %}
+      <div class="box mb-5">
+        <article>
+          <h2 class="title is-4">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          <p class="subtitle is-6 has-text-grey">
+            <i class="fas fa-calendar-alt"></i> {{ post.date | date: "%B %-d, %Y" }}
+            {% if post.author %} &middot; <i class="fas fa-user"></i> {{ post.author }}{% endif %}
+          </p>
+          <div class="content">
+            {{ post.excerpt }}
+          </div>
+          <a href="{{ post.url | relative_url }}" class="button is-primary is-outlined is-small">Read More</a>
+        </article>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>No activities posted yet. Check back soon!</p>
+    {% endif %}
+  </div>
+</section>

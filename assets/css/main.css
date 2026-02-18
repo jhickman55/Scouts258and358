@@ -12,15 +12,20 @@
   --scout-bark: #2c2416;            /* Dark brown - tree bark */
 }
 
-/* Hero section */
+/* Hero section - !important needed to override Bulma's built-in .hero.is-primary color */
 .hero.is-primary {
-  background-color: var(--scout-primary);
-  background-image: linear-gradient(135deg, var(--scout-primary-dark) 0%, var(--scout-primary) 50%, var(--scout-primary-light) 100%);
+  background-color: var(--scout-primary) !important;
+  background-image: linear-gradient(135deg, var(--scout-primary-dark) 0%, var(--scout-primary) 50%, var(--scout-primary-light) 100%) !important;
+}
+
+.hero.is-primary .title,
+.hero.is-primary .subtitle {
+  color: #ffffff !important;
 }
 
 /* Navbar - dark bark brown */
 .navbar.is-dark {
-  background-color: var(--scout-bark);
+  background-color: var(--scout-bark) !important;
 }
 
 .navbar-item:hover,
@@ -78,23 +83,26 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Buttons - scout colors */
+/* Buttons - scout colors, !important to override Bulma defaults */
 .button.is-primary {
-  background-color: var(--scout-primary);
+  background-color: var(--scout-primary) !important;
+  border-color: var(--scout-primary) !important;
 }
 
 .button.is-primary:hover {
-  background-color: var(--scout-primary-light);
+  background-color: var(--scout-primary-light) !important;
+  border-color: var(--scout-primary-light) !important;
 }
 
 .button.is-primary.is-outlined {
-  border-color: var(--scout-primary);
-  color: var(--scout-primary);
+  background-color: transparent !important;
+  border-color: var(--scout-primary) !important;
+  color: var(--scout-primary) !important;
 }
 
 .button.is-primary.is-outlined:hover {
-  background-color: var(--scout-primary);
-  color: #ffffff;
+  background-color: var(--scout-primary) !important;
+  color: #ffffff !important;
 }
 
 /* Icon colors */

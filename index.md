@@ -18,22 +18,13 @@ title: Home
 
 <section class="section">
   <div class="container">
-    <div class="columns is-vcentered">
-      <div class="column is-8">
-        <h2 class="title is-3">Who We Are</h2>
-        <div class="content">
-          <p>Troops 258 and 358 are young, active, youth-led scout troops that meet weekly at <a href="https://www.rockbridgelife.com/" target="_blank" rel="noopener noreferrer">Rockbridge Church</a> in Cedar Park. We are part of the North Shore District of the <a href="https://www.bsacac.org/" target="_blank" rel="noopener noreferrer">Capitol Area Council</a>.</p>
+    <h2 class="title is-3">Who We Are</h2>
+    <div class="content">
+      <p>Troops 258 and 358 are young, active, youth-led scout troops that meet weekly at <a href="https://www.rockbridgelife.com/" target="_blank" rel="noopener noreferrer">Rockbridge Church</a> in Cedar Park. We are part of the North Shore District of the <a href="https://www.bsacac.org/" target="_blank" rel="noopener noreferrer">Capitol Area Council</a>.</p>
 
-          <p><strong>Troop 258</strong> is our boys' troop and <strong>Troop 358</strong> is our girls' troop. Both troops share resources and coordinate activities while maintaining separate leadership structures.</p>
-        </div>
-      </div>
-      <div class="column is-4 has-text-centered">
-        <!-- Troop logo or image placeholder -->
-        <figure class="image is-square">
-          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Troops 258 & 358 Logo" onerror="this.style.display='none'">
-        </figure>
-      </div>
+      <p><strong>Troop 258</strong> is our boys' troop and <strong>Troop 358</strong> is our girls' troop. Both troops share resources and coordinate activities while maintaining separate leadership structures.</p>
     </div>
+    <!-- TODO: Add troop logo here once available. Use: <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Troops 258 & 358 Logo"> -->
   </div>
 </section>
 

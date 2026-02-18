@@ -87,28 +87,12 @@ title: Home
 
 <section class="section">
   <div class="container">
-    <div class="columns">
-      <div class="column is-6">
-        <h2 class="title is-3">Meeting Info</h2>
-        <div class="content">
-          <p><i class="fas fa-map-marker-alt has-text-primary"></i> <strong>{{ site.meeting_location }}</strong><br>
-          {{ site.meeting_address }}</p>
-          <p><i class="fas fa-clock has-text-primary"></i> <strong>{{ site.meeting_time }}</strong></p>
-          <p>Scouts should be at least 10 years old and in fifth grade to join.</p>
-        </div>
-      </div>
-      <div class="column is-6">
-        <h2 class="title is-3">Costs</h2>
-        <div class="content">
-          <table class="table is-fullwidth">
-            <tbody>
-              <tr><td><strong>Annual Registration</strong></td><td>$85</td></tr>
-              <tr><td><strong>Monthly Troop Dues</strong></td><td>$11/month</td></tr>
-              <tr><td><strong>Campout Fees</strong></td><td>$20 per event</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <h2 class="title is-3">Meeting Info</h2>
+    <div class="content">
+      <p><i class="fas fa-map-marker-alt has-text-primary"></i> <strong>{{ site.meeting_location }}</strong><br>
+      {{ site.meeting_address }}</p>
+      <p><i class="fas fa-clock has-text-primary"></i> <strong>{{ site.meeting_time }}</strong></p>
+      <p>Scouts should be at least 10 years old and in fifth grade to join.</p>
     </div>
   </div>
 </section>

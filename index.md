@@ -1,0 +1,133 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero is-primary is-medium">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1 has-text-white">Scouts BSA Troops 258 & 358</h1>
+      <p class="subtitle is-4 has-text-white">Youth-led scouting in Cedar Park & Leander, Texas</p>
+      <div class="buttons is-centered mt-4">
+        <a href="{{ '/contact/' | relative_url }}" class="button is-white is-outlined is-medium">Join Our Troop</a>
+        <a href="{{ '/calendar/' | relative_url }}" class="button is-light is-medium">View Calendar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column is-8">
+        <h2 class="title is-3">Who We Are</h2>
+        <div class="content">
+          <p>Troops 258 and 358 are young, active, youth-led scout troops that meet weekly at <a href="https://www.rockbridgelife.com/" target="_blank" rel="noopener noreferrer">Rockbridge Church</a> in Cedar Park. We are part of the North Shore District of the <a href="https://www.bsacac.org/" target="_blank" rel="noopener noreferrer">Capitol Area Council</a>.</p>
+
+          <p><strong>Troop 258</strong> is our boys' troop and <strong>Troop 358</strong> is our girls' troop. Both troops share resources and coordinate activities while maintaining separate leadership structures.</p>
+        </div>
+      </div>
+      <div class="column is-4 has-text-centered">
+        <!-- Troop logo or image placeholder -->
+        <figure class="image is-square">
+          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Troops 258 & 358 Logo" onerror="this.style.display='none'">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section has-background-light">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Quick Links</h2>
+    <div class="columns is-multiline">
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-content has-text-centered">
+            <span class="icon is-large has-text-primary"><i class="fas fa-calendar-alt fa-3x"></i></span>
+            <h3 class="title is-5 mt-3">Calendar</h3>
+            <p>View upcoming meetings, campouts, and events.</p>
+            <a href="{{ '/calendar/' | relative_url }}" class="button is-primary is-outlined mt-3">View Calendar</a>
+          </div>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-content has-text-centered">
+            <span class="icon is-large has-text-primary"><i class="fas fa-user-plus fa-3x"></i></span>
+            <h3 class="title is-5 mt-3">New Scouts</h3>
+            <p>Interested in joining? Learn how to get started.</p>
+            <a href="{{ '/new-scout-process/' | relative_url }}" class="button is-primary is-outlined mt-3">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-content has-text-centered">
+            <span class="icon is-large has-text-primary"><i class="fas fa-compass fa-3x"></i></span>
+            <h3 class="title is-5 mt-3">Scout Portal</h3>
+            <p>Resources for current scouts and leaders.</p>
+            <a href="{{ '/scout-portal/' | relative_url }}" class="button is-primary is-outlined mt-3">Enter Portal</a>
+          </div>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="card">
+          <div class="card-content has-text-centered">
+            <span class="icon is-large has-text-primary"><i class="fas fa-envelope fa-3x"></i></span>
+            <h3 class="title is-5 mt-3">Contact Us</h3>
+            <p>Questions? Reach out to our troop leadership.</p>
+            <a href="{{ '/contact/' | relative_url }}" class="button is-primary is-outlined mt-3">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-6">
+        <h2 class="title is-3">Meeting Info</h2>
+        <div class="content">
+          <p><i class="fas fa-map-marker-alt has-text-primary"></i> <strong>{{ site.meeting_location }}</strong><br>
+          {{ site.meeting_address }}</p>
+          <p><i class="fas fa-clock has-text-primary"></i> <strong>{{ site.meeting_time }}</strong></p>
+          <p>Scouts should be at least 10 years old and in fifth grade to join.</p>
+        </div>
+      </div>
+      <div class="column is-6">
+        <h2 class="title is-3">Costs</h2>
+        <div class="content">
+          <table class="table is-fullwidth">
+            <tbody>
+              <tr><td><strong>Annual Registration</strong></td><td>$85</td></tr>
+              <tr><td><strong>Monthly Troop Dues</strong></td><td>$11/month</td></tr>
+              <tr><td><strong>Campout Fees</strong></td><td>$20 per event</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section has-background-light">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-6">
+        <h2 class="title is-4">Scout Oath</h2>
+        <div class="content">
+          <p><em>On my honor I will do my best to do my duty to God and my country and to obey the Scout Law; to help other people at all times; to keep myself physically strong, mentally awake, and morally straight.</em></p>
+        </div>
+      </div>
+      <div class="column is-6">
+        <h2 class="title is-4">Scout Law</h2>
+        <div class="content">
+          <p><em>A Scout is trustworthy, loyal, helpful, friendly, courteous, kind, obedient, cheerful, thrifty, brave, clean, and reverent.</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

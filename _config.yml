@@ -1,0 +1,43 @@
+# Site settings
+title: "Scouts BSA Troops 258 & 358"
+description: "Youth-led scout troops serving Cedar Park and Leander, Texas"
+url: "https://troops258and358.org"
+baseurl: ""
+
+# Meeting info
+meeting_location: "Rockbridge Church"
+meeting_address: "2001 West New Hope Drive, Cedar Park, TX 78613"
+meeting_time: "Every Tuesday at 7pm CT"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude from build
+exclude:
+  - README.md
+  - SITEMAP.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - "*.md~"
+
+# Collections (for future use)
+collections:
+  posts:
+    output: true
+    permalink: /activities/:year/:month/:day/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

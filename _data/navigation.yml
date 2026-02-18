@@ -1,0 +1,43 @@
+main:
+  - title: Home
+    url: /
+  - title: Activities
+    url: /activities/
+    children:
+      - title: Photo Library
+        url: /photo-library/
+  - title: Calendar
+    url: /calendar/
+    protected: true
+  - title: Contact Us
+    url: /contact/
+  - title: Rosters
+    children:
+      - title: Troop 258
+        url: /rosters/258/
+        protected: true
+      - title: Troop 358
+        url: /rosters/358/
+        protected: true
+      - title: Dinosaur Roster
+        url: /rosters/dinosaur/
+        protected: true
+  - title: Resources
+    children:
+      - title: Adult Resources
+        url: /resources/
+      - title: New Scout Process
+        url: /new-scout-process/
+      - title: Training
+        url: /training/
+  - title: Scout Portal
+    url: /scout-portal/
+    protected: true
+  - title: Troop Store
+    url: /troop-store/
+    protected: true
+  - title: Payments
+    url: /payments/
+  - title: Mulch Fundraiser
+    url: https://troops258-358.square.site/mulch-fundraiser
+    external: true

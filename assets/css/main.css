@@ -1,0 +1,117 @@
+/* Troops 258 & 358 - Custom Styles */
+
+/* Override Bulma primary color to scout-appropriate blue */
+:root {
+  --scout-primary: #003f87;
+  --scout-primary-light: #1a5dab;
+  --scout-accent: #ce1126;
+  --scout-gold: #fcd116;
+}
+
+/* Hero section */
+.hero.is-primary {
+  background-color: var(--scout-primary);
+  background-image: linear-gradient(135deg, var(--scout-primary) 0%, var(--scout-primary-light) 100%);
+}
+
+/* Navbar */
+.navbar.is-dark {
+  background-color: #1a1a2e;
+}
+
+.navbar-item:hover,
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a2e;
+  color: #b0b0b0;
+  padding: 3rem 1.5rem;
+}
+
+.footer .title {
+  color: #ffffff;
+}
+
+.footer a {
+  color: #7eb8da;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.footer-links {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+/* Cards */
+.card {
+  height: 100%;
+  transition: box-shadow 0.2s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons - scout colors */
+.button.is-primary {
+  background-color: var(--scout-primary);
+}
+
+.button.is-primary:hover {
+  background-color: var(--scout-primary-light);
+}
+
+.button.is-primary.is-outlined {
+  border-color: var(--scout-primary);
+  color: var(--scout-primary);
+}
+
+.button.is-primary.is-outlined:hover {
+  background-color: var(--scout-primary);
+  color: #ffffff;
+}
+
+/* Icon colors */
+.has-text-primary {
+  color: var(--scout-primary) !important;
+}
+
+/* Table styling */
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Content images */
+.content img {
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hero.is-medium .hero-body {
+    padding: 4rem 1.5rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Lock icon in nav */
+.navbar-item .fa-lock {
+  opacity: 0.6;
+  margin-right: 4px;
+}

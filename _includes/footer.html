@@ -1,0 +1,29 @@
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-4">
+        <h4 class="title is-5 has-text-white">Scouts BSA Troops 258 & 358</h4>
+        <p>Youth-led scout troops serving Cedar Park and Leander, Texas.</p>
+      </div>
+      <div class="column is-4">
+        <h4 class="title is-5 has-text-white">Meeting Info</h4>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> {{ site.meeting_location }}<br>
+          {{ site.meeting_address }}<br>
+          <i class="fas fa-clock"></i> {{ site.meeting_time }}
+        </p>
+      </div>
+      <div class="column is-4">
+        <h4 class="title is-5 has-text-white">Links</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.bsacac.org/" target="_blank" rel="noopener noreferrer">Capitol Area Council</a></li>
+          <li><a href="https://www.scouting.org/" target="_blank" rel="noopener noreferrer">Scouting America</a></li>
+          <li><a href="https://www.rockbridgelife.com/" target="_blank" rel="noopener noreferrer">Rockbridge Church</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content has-text-centered mt-4">
+      <p>&copy; {{ 'now' | date: "%Y" }} Scouts BSA Troops 258 & 358. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

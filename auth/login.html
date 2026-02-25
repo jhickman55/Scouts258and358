@@ -1,0 +1,63 @@
+---
+layout: default
+title: Scout Portal Login
+permalink: /auth/login/
+---
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-5">
+        <div class="box">
+          <h1 class="title is-3 has-text-centered">
+            <i class="fas fa-lock has-text-primary"></i> Scout Portal
+          </h1>
+          <p class="has-text-centered mb-4">Sign in to access member resources</p>
+
+          <div id="login-error" class="notification is-danger" style="display: none;"></div>
+
+          <form id="login-form">
+            <div class="field">
+              <label class="label" for="login-email">Email</label>
+              <div class="control has-icons-left">
+                <input class="input" type="email" id="login-email" placeholder="your@email.com" required>
+                <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="login-password">Password</label>
+              <div class="control has-icons-left">
+                <input class="input" type="password" id="login-password" placeholder="Your password" required>
+                <span class="icon is-small is-left"><i class="fas fa-key"></i></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <button type="submit" id="login-submit" class="button is-primary is-fullwidth">
+                  <i class="fas fa-sign-in-alt mr-2"></i> Sign In
+                </button>
+              </div>
+            </div>
+
+            <p class="has-text-centered mt-3">
+              <a href="#" id="forgot-password">Forgot password?</a>
+            </p>
+          </form>
+        </div>
+
+        <p class="has-text-centered has-text-grey mt-4">
+          <small>Don't have an account? Contact your Scoutmaster or Webmaster to request access.</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<meta name="baseurl" content="{{ site.baseurl }}">
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+<script src="{{ '/assets/js/firebase-config.js' | relative_url }}"></script>
+<script>firebase.initializeApp(firebaseConfig);</script>
+<script src="{{ '/assets/js/auth-login.js' | relative_url }}"></script>

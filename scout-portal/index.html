@@ -1,0 +1,106 @@
+---
+layout: protected
+title: Scout Portal
+subtitle: Welcome to the members-only area
+permalink: /scout-portal/
+---
+
+<div class="columns is-multiline">
+  <div class="column is-4">
+    <div class="card">
+      <div class="card-content has-text-centered">
+        <span class="icon is-large has-text-primary"><i class="fas fa-calendar-alt fa-3x"></i></span>
+        <h3 class="title is-5 mt-3">Calendar</h3>
+        <p>View upcoming meetings, campouts, and events.</p>
+        <a href="{{ '/scout-portal/calendar/' | relative_url }}" class="button is-primary is-outlined mt-3">View Calendar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-4">
+    <div class="card">
+      <div class="card-content has-text-centered">
+        <span class="icon is-large has-text-primary"><i class="fas fa-users fa-3x"></i></span>
+        <h3 class="title is-5 mt-3">Troop Rosters</h3>
+        <p>View current troop membership.</p>
+        <div class="buttons is-centered mt-3">
+          <a href="{{ '/scout-portal/rosters/258/' | relative_url }}" class="button is-primary is-outlined is-small">258</a>
+          <a href="{{ '/scout-portal/rosters/358/' | relative_url }}" class="button is-primary is-outlined is-small">358</a>
+          <a href="{{ '/scout-portal/rosters/dinosaur/' | relative_url }}" class="button is-primary is-outlined is-small">Alumni</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-4">
+    <div class="card">
+      <div class="card-content has-text-centered">
+        <span class="icon is-large has-text-primary"><i class="fas fa-store fa-3x"></i></span>
+        <h3 class="title is-5 mt-3">Troop Store</h3>
+        <p>Order troop gear and merchandise.</p>
+        <a href="{{ '/scout-portal/troop-store/' | relative_url }}" class="button is-primary is-outlined mt-3">Visit Store</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-4">
+    <div class="card">
+      <div class="card-content has-text-centered">
+        <span class="icon is-large has-text-primary"><i class="fas fa-award fa-3x"></i></span>
+        <h3 class="title is-5 mt-3">Scout Positions</h3>
+        <p>Info and resources for each leadership role.</p>
+        <a href="{{ '/scout-portal/positions/' | relative_url }}" class="button is-primary is-outlined mt-3">View Positions</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-4">
+    <div class="card">
+      <div class="card-content has-text-centered">
+        <span class="icon is-large has-text-primary"><i class="fas fa-medal fa-3x"></i></span>
+        <h3 class="title is-5 mt-3">Merit Badges</h3>
+        <p>Merit badge resources and tracking.</p>
+        <a href="{{ '/scout-portal/merit-badges/' | relative_url }}" class="button is-primary is-outlined mt-3">Merit Badges</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-4">
+    <div class="card">
+      <div class="card-content has-text-centered">
+        <span class="icon is-large has-text-primary"><i class="fas fa-campground fa-3x"></i></span>
+        <h3 class="title is-5 mt-3">Camping</h3>
+        <p>Camping guides, checklists, and tips.</p>
+        <a href="{{ '/scout-portal/camping/' | relative_url }}" class="button is-primary is-outlined mt-3">Camping Info</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-4">
+    <div class="card">
+      <div class="card-content has-text-centered">
+        <span class="icon is-large has-text-primary"><i class="fas fa-utensils fa-3x"></i></span>
+        <h3 class="title is-5 mt-3">Grubmaster</h3>
+        <p>Meal planning guides for campouts.</p>
+        <a href="{{ '/scout-portal/grubmaster/' | relative_url }}" class="button is-primary is-outlined mt-3">Grubmaster</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-4">
+    <div class="card">
+      <div class="card-content has-text-centered">
+        <span class="icon is-large has-text-primary"><i class="fas fa-book fa-3x"></i></span>
+        <h3 class="title is-5 mt-3">Training Resources</h3>
+        <p>Scout training materials and guides.</p>
+        <a href="{{ '/scout-portal/training-resources/' | relative_url }}" class="button is-primary is-outlined mt-3">Resources</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="has-text-centered mt-6">
+  <button onclick="firebase.auth().signOut().then(function() { window.location.href='{{ '/' | relative_url }}'; })" class="button is-light">
+    <i class="fas fa-sign-out-alt mr-2"></i> Sign Out
+  </button>
+</div>

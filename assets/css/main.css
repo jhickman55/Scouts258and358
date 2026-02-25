@@ -70,6 +70,7 @@
   background-color: var(--scout-cream) !important;
 }
 
+.has-background-light .title,
 .has-background-light .content,
 .has-background-light .content em,
 .has-background-light .content p {

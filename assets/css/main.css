@@ -70,11 +70,10 @@
   background-color: var(--scout-cream) !important;
 }
 
-.has-background-light > .container > .title,
-.has-background-light > .container > .columns .title,
-.has-background-light > .container > .columns .content,
-.has-background-light > .container > .columns .content em,
-.has-background-light > .container > .columns .content p {
+.has-background-light > .container > .columns > .column > .title,
+.has-background-light > .container > .columns > .column > .content,
+.has-background-light > .container > .columns > .column > .content em,
+.has-background-light > .container > .columns > .column > .content p {
   color: #2c2416 !important;
 }
 

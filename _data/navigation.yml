@@ -1,11 +1,6 @@
 main:
   - title: Home
     url: /
-  - title: Activities
-    url: /activities/
-    children:
-      - title: Photo Library
-        url: /photo-library/
   - title: Contact Us
     url: /contact/
   - title: Resources

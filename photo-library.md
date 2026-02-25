@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: protected
 title: Photo Library
 description: Photos from Troops 258 & 358 activities and events
-permalink: /photo-library/
+permalink: /scout-portal/photo-library/
 ---
 
 Check out photos from our troop activities, campouts, and events.

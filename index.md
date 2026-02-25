@@ -22,7 +22,14 @@ title: Home
     <div class="content">
       <p>Troops 258 and 358 are young, active, youth-led scout troops that meet weekly at <a href="https://www.rockbridgelife.com/" target="_blank" rel="noopener noreferrer">Rockbridge Church</a> in Cedar Park. We are part of the North Shore District of the <a href="https://www.bsacac.org/" target="_blank" rel="noopener noreferrer">Capitol Area Council</a>.</p>
 
-      <p><strong>Troop 258</strong> is our boys' troop and <strong>Troop 358</strong> is our girls' troop. Both troops share resources and coordinate activities while maintaining separate leadership structures.</p>
+      <p><strong>Troop 258</strong> is our boy's troop with 7 patrols and 53 scouts. <strong>Troop 358</strong> is our girl's troop with 3 patrols and 25 scouts. Both troops share resources and coordinate activities while maintaining separate leadership structures.</p>
+
+      <h3>Leadership</h3>
+      <ul>
+        <li><strong>Troop 258 Scoutmaster:</strong> Mr. Shawn Trollope</li>
+        <li><strong>Troop 358 Scoutmaster:</strong> Mrs. Carla Osuna</li>
+        <li><strong>Committee Chair:</strong> Brian Kennedy</li>
+      </ul>
     </div>
     <!-- TODO: Add troop logo here once available. Use: <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Troops 258 & 358 Logo"> -->
   </div>

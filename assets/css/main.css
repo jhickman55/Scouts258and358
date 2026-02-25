@@ -70,6 +70,12 @@
   background-color: var(--scout-cream) !important;
 }
 
+.has-background-light .content,
+.has-background-light .content em,
+.has-background-light .content p {
+  color: #2c2416 !important;
+}
+
 /* Cards */
 .card {
   height: 100%;

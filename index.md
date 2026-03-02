@@ -10,7 +10,7 @@ title: Home
       <p class="subtitle is-4 has-text-white">Youth-led scouting in Cedar Park & Leander, Texas</p>
       <div class="buttons is-centered mt-4">
         <a href="{{ '/contact/' | relative_url }}" class="button is-white is-outlined is-medium">Join Our Troop</a>
-        <a href="{{ '/calendar/' | relative_url }}" class="button is-light is-medium">View Calendar</a>
+        <a href="{{ '/scout-portal/' | relative_url }}" class="button is-light is-medium">Scout Portal</a>
       </div>
     </div>
   </div>
@@ -55,17 +55,7 @@ title: Home
   <div class="container">
     <h2 class="title is-3 has-text-centered">Quick Links</h2>
     <div class="columns is-multiline">
-      <div class="column is-3">
-        <div class="card">
-          <div class="card-content has-text-centered">
-            <span class="icon is-large has-text-primary"><i class="fas fa-calendar-alt fa-3x"></i></span>
-            <h3 class="title is-5 mt-3">Calendar</h3>
-            <p>View upcoming meetings, campouts, and events.</p>
-            <a href="{{ '/calendar/' | relative_url }}" class="button is-primary is-outlined mt-3">View Calendar</a>
-          </div>
-        </div>
-      </div>
-      <div class="column is-3">
+      <div class="column is-4">
         <div class="card">
           <div class="card-content has-text-centered">
             <span class="icon is-large has-text-primary"><i class="fas fa-user-plus fa-3x"></i></span>
@@ -75,7 +65,7 @@ title: Home
           </div>
         </div>
       </div>
-      <div class="column is-3">
+      <div class="column is-4">
         <div class="card">
           <div class="card-content has-text-centered">
             <span class="icon is-large has-text-primary"><i class="fas fa-compass fa-3x"></i></span>
@@ -85,7 +75,7 @@ title: Home
           </div>
         </div>
       </div>
-      <div class="column is-3">
+      <div class="column is-4">
         <div class="card">
           <div class="card-content has-text-centered">
             <span class="icon is-large has-text-primary"><i class="fas fa-envelope fa-3x"></i></span>

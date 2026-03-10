@@ -12,6 +12,7 @@ title: Home
         <a href="{{ '/contact/' | relative_url }}" class="button is-white is-outlined is-medium">Join Our Troop</a>
         <a href="{{ '/scout-portal/' | relative_url }}" class="button is-light is-medium">Scout Portal</a>
       </div>
+      <img src="{{ '/assets/images/logos/258358logoWhite.png' | relative_url }}" alt="Troops 258 & 358 Logo" style="max-width: 200px; margin-top: 1.5rem;">
     </div>
   </div>
 </section>

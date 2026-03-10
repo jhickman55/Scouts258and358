@@ -15,7 +15,8 @@
       "Bash(ffmpeg -version)",
       "Bash(python -c \"from PIL import Image; print\\(''PIL available''\\)\")",
       "Bash(python3 -c \"from PIL import Image; print\\(''PIL available''\\)\")",
-      "Bash(magick /c/dev/ScoutsWebsite/assets/images/hero-bg.jpg -resize 1920x -quality 80 /c/dev/ScoutsWebsite/assets/images/hero-bg-optimized.jpg)"
+      "Bash(magick /c/dev/ScoutsWebsite/assets/images/hero-bg.jpg -resize 1920x -quality 80 /c/dev/ScoutsWebsite/assets/images/hero-bg-optimized.jpg)",
+      "Bash(ls -lh /c/dev/ScoutsWebsite/images/Background.jpg /c/dev/ScoutsWebsite/images/Logos/*)"
     ]
   }
 }

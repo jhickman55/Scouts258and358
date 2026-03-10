@@ -12,6 +12,11 @@
   --scout-bark: #2c2416;            /* Dark brown - tree bark */
 }
 
+/* Fixed navbar - offset body so content isn't hidden behind it */
+body {
+  padding-top: 3.25rem;
+}
+
 /* Hero section - background image with dark overlay for text readability */
 .hero.is-primary {
   background-color: var(--scout-primary) !important;

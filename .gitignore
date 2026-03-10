@@ -10,3 +10,6 @@ Gemfile.lock
 Thumbs.db
 .env
 node_modules/
+
+# Original full-resolution images (keep optimized versions only in repo)
+assets/images/hero-bg-original.jpg

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "WebFetch(domain:troops258and358.org)",
+      "Bash(git -C \"C:\\\\dev\\\\ScoutsWebsite\" log --oneline -10)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:jhickman55.github.io)",
+      "Bash(magick --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(python -c \"from PIL import Image; print\\(''PIL available''\\)\")",
+      "Bash(python3 -c \"from PIL import Image; print\\(''PIL available''\\)\")",
+      "Bash(magick /c/dev/ScoutsWebsite/assets/images/hero-bg.jpg -resize 1920x -quality 80 /c/dev/ScoutsWebsite/assets/images/hero-bg-optimized.jpg)"
+    ]
+  }
+}

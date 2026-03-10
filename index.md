@@ -28,8 +28,12 @@ title: Home
         <div class="card">
           <div class="card-content">
             <h3 class="title is-4">Troop 258</h3>
-            <p>Our boy's troop with <strong>7 patrols</strong> and <strong>53 scouts</strong>.</p>
-            <p><strong>Scoutmaster:</strong> Mr. Shawn Trollope</p>
+            <ul>
+              <li>Boy's Troop</li>
+              <li>7 Patrols</li>
+              <li>53 Scouts</li>
+              <li><strong>Scoutmaster:</strong> Mr. Shawn Trollope</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -37,8 +41,12 @@ title: Home
         <div class="card">
           <div class="card-content">
             <h3 class="title is-4">Troop 358</h3>
-            <p>Our girl's troop with <strong>3 patrols</strong> and <strong>25 scouts</strong>.</p>
-            <p><strong>Scoutmaster:</strong> Mrs. Carla Osuna</p>
+            <ul>
+              <li>Girl's Troop</li>
+              <li>3 Patrols</li>
+              <li>25 Scouts</li>
+              <li><strong>Scoutmaster:</strong> Mrs. Carla Osuna</li>
+            </ul>
           </div>
         </div>
       </div>

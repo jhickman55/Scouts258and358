@@ -1,0 +1,61 @@
+---
+layout: default
+title: Scout Positions
+subtitle: Youth leadership positions in our troop
+permalink: /scout-portal/positions/
+---
+
+<!-- Loading indicator while checking auth -->
+<section class="section" id="auth-loading">
+  <div class="container has-text-centered">
+    <p class="is-size-5"><i class="fas fa-spinner fa-spin"></i> Checking login...</p>
+  </div>
+</section>
+
+<!-- Protected content - hidden until auth is confirmed -->
+<div id="protected-content" style="display: none;">
+  <section class="section">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="{{ '/scout-portal/' | relative_url }}">Scout Portal</a></li>
+          <li class="is-active"><a>Scout Positions</a></li>
+        </ul>
+      </nav>
+
+      <h1 class="title is-2">Scout Positions</h1>
+      <p class="subtitle is-4">Youth leadership positions in our troop</p>
+      <hr>
+
+      <div class="content">
+        <p>Every Scout has the opportunity to serve in a leadership position. Click on any position below to learn about its responsibilities and resources.</p>
+      </div>
+
+      <div class="columns is-multiline">
+        {% for position in site.data.positions %}
+        <div class="column is-4">
+          <a href="{{ '/scout-portal/positions/' | append: position.slug | append: '/' | relative_url }}" class="box" style="display: block; height: 100%; transition: transform 0.2s;">
+            <h3 class="title is-5" style="color: var(--scout-primary);">
+              {{ position.title }}
+              {% if position.abbreviation != position.title %}
+              <span class="tag is-small" style="background-color: var(--scout-primary); color: white;">{{ position.abbreviation }}</span>
+              {% endif %}
+            </h3>
+            <p class="is-size-7">{{ position.description | truncate: 120 }}</p>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+
+      <hr>
+      <a href="{{ '/scout-portal/' | relative_url }}" class="button is-outlined" style="border-color: var(--scout-primary); color: var(--scout-primary);">
+        <span class="icon"><i class="fas fa-arrow-left"></i></span>
+        <span>Back to Scout Portal</span>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+{% include auth-guard.html %}

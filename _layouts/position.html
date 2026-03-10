@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+<!-- Loading indicator while checking auth -->
+<section class="section" id="auth-loading">
+  <div class="container has-text-centered">
+    <p class="is-size-5"><i class="fas fa-spinner fa-spin"></i> Checking login...</p>
+  </div>
+</section>
+
+<!-- Protected content - hidden until auth is confirmed -->
+<div id="protected-content" style="display: none;">
+  <section class="section">
+    <div class="container">
+
+      {% assign position = nil %}
+      {% for p in site.data.positions %}
+        {% if p.slug == page.position_slug %}
+          {% assign position = p %}
+        {% endif %}
+      {% endfor %}
+
+      {% if position %}
+
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="{{ '/scout-portal/' | relative_url }}">Scout Portal</a></li>
+          <li><a href="{{ '/scout-portal/positions/' | relative_url }}">Scout Positions</a></li>
+          <li class="is-active"><a>{{ position.title }}</a></li>
+        </ul>
+      </nav>
+
+      <h1 class="title is-2">{{ position.title }}
+        {% if position.abbreviation != position.title %}
+        <span class="tag is-medium ml-2" style="background-color: var(--scout-primary); color: white;">{{ position.abbreviation }}</span>
+        {% endif %}
+      </h1>
+      <hr>
+
+      <div class="content">
+        <div class="box">
+          <p class="is-size-5">{{ position.description }}</p>
+        </div>
+
+        {% if position.appointment %}
+        <h3 class="title is-4"><i class="fas fa-user-check mr-2"></i>Appointment</h3>
+        <p>{{ position.appointment }}</p>
+        {% endif %}
+
+        {% if position.requirements %}
+        <h3 class="title is-4"><i class="fas fa-clipboard-check mr-2"></i>Requirements</h3>
+        <ul>
+          {% for req in position.requirements %}
+          <li>{{ req }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        <h3 class="title is-4"><i class="fas fa-tasks mr-2"></i>Responsibilities</h3>
+        <ul>
+          {% for duty in position.responsibilities %}
+          <li>{{ duty }}</li>
+          {% endfor %}
+        </ul>
+
+        {% if position.resources.size > 0 %}
+        <h3 class="title is-4"><i class="fas fa-folder-open mr-2"></i>Resources</h3>
+        <div class="table-container">
+          <table class="table is-fullwidth is-striped">
+            <thead>
+              <tr>
+                <th>Resource</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for resource in position.resources %}
+              <tr>
+                <td>{{ resource.name }}</td>
+                <td><span class="tag">{{ resource.type }}</span></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% endif %}
+
+        <hr>
+        <a href="{{ '/scout-portal/positions/' | relative_url }}" class="button is-outlined" style="border-color: var(--scout-primary); color: var(--scout-primary);">
+          <span class="icon"><i class="fas fa-arrow-left"></i></span>
+          <span>Back to All Positions</span>
+        </a>
+      </div>
+
+      {% else %}
+      <p>Position not found.</p>
+      {% endif %}
+
+    </div>
+  </section>
+</div>
+
+{% include auth-guard.html %}

@@ -14,5 +14,5 @@ Have questions about our troops? Interested in joining? Fill out the form below 
 
 You can also reach us at our weekly meetings:
 
-- **Location:** {{ site.meeting_location }}, {{ site.meeting_address }}
+- **Location:** {{ site.meeting_location }}, <a href="https://www.google.com/maps/search/?api=1&query=2001+West+New+Hope+Drive+Cedar+Park+TX+78613" target="_blank" rel="noopener noreferrer">{{ site.meeting_address }}</a>
 - **Time:** {{ site.meeting_time }}

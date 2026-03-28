@@ -103,7 +103,7 @@ title: Home
     <h2 class="title is-3">Meeting Info</h2>
     <div class="content">
       <p><i class="fas fa-map-marker-alt has-text-primary"></i> <strong>{{ site.meeting_location }}</strong><br>
-      {{ site.meeting_address }}</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=2001+West+New+Hope+Drive+Cedar+Park+TX+78613" target="_blank" rel="noopener noreferrer">{{ site.meeting_address }}</a></p>
       <p><i class="fas fa-clock has-text-primary"></i> <strong>{{ site.meeting_time }}</strong></p>
       <p>Scouts should be at least 10 years old and in fifth grade to join.</p>
     </div>

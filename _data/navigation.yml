@@ -13,6 +13,8 @@ main:
         url: /training/
   - title: Payments
     url: /payments/
+  - title: Troop Store
+    url: /troop-store/
   - title: Mulch Fundraiser
     url: https://troops258-358.square.site/mulch-fundraiser
     external: true

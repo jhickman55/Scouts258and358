@@ -1,104 +1,89 @@
 ---
-layout: auth
+layout: protected
 ---
 
-<!-- Loading indicator while checking auth -->
-<section class="section" id="auth-loading">
-  <div class="container has-text-centered">
-    <p class="is-size-5"><i class="fas fa-spinner fa-spin"></i> Checking login...</p>
+{% assign position = nil %}
+{% for p in site.data.positions %}
+  {% if p.slug == page.position_slug %}
+    {% assign position = p %}
+  {% endif %}
+{% endfor %}
+
+{% if position %}
+<section class="page-hero">
+  {% include topo-bg.html tone="mid" %}
+  <div class="page-hero__inner">
+    <div class="eyebrow eyebrow--sun">★ {{ position.abbreviation }}</div>
+    <h1>{{ position.title }}.</h1>
+    <p class="lede">{{ position.description | truncate: 200 }}</p>
   </div>
 </section>
 
-<!-- Protected content - hidden until auth is confirmed -->
-<div id="protected-content" style="display: none;">
-  <section class="section">
-    <div class="container">
+<section class="section band-paper">
+  <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+    <a href="{{ '/scout-portal/' | relative_url }}">Scout Portal</a>
+    <span class="sep">/</span>
+    <a href="{{ '/scout-portal/positions/' | relative_url }}">Scout Positions</a>
+    <span class="sep">/</span>
+    <span class="current">{{ position.title }}</span>
+  </nav>
 
-      {% assign position = nil %}
-      {% for p in site.data.positions %}
-        {% if p.slug == page.position_slug %}
-          {% assign position = p %}
-        {% endif %}
-      {% endfor %}
+  <div style="max-width: 880px;">
+    <div class="md-content">
+      <div class="position-detail__intro">{{ position.description }}</div>
 
-      {% if position %}
-
-      <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li><a href="{{ '/scout-portal/' | relative_url }}">Scout Portal</a></li>
-          <li><a href="{{ '/scout-portal/positions/' | relative_url }}">Scout Positions</a></li>
-          <li class="is-active"><a>{{ position.title }}</a></li>
-        </ul>
-      </nav>
-
-      <h1 class="title is-2">{{ position.title }}
-        {% if position.abbreviation != position.title %}
-        <span class="tag is-medium ml-2" style="background-color: var(--scout-primary); color: white;">{{ position.abbreviation }}</span>
-        {% endif %}
-      </h1>
-      <hr>
-
-      <div class="content">
-        <div class="box">
-          <p class="is-size-5">{{ position.description }}</p>
-        </div>
-
-        {% if position.appointment %}
-        <h3 class="title is-4"><i class="fas fa-user-check mr-2"></i>Appointment</h3>
-        <p>{{ position.appointment }}</p>
-        {% endif %}
-
-        {% if position.requirements %}
-        <h3 class="title is-4"><i class="fas fa-clipboard-check mr-2"></i>Requirements</h3>
-        <ul>
-          {% for req in position.requirements %}
-          <li>{{ req }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-
-        <h3 class="title is-4"><i class="fas fa-tasks mr-2"></i>Responsibilities</h3>
-        <ul>
-          {% for duty in position.responsibilities %}
-          <li>{{ duty }}</li>
-          {% endfor %}
-        </ul>
-
-        {% if position.resources.size > 0 %}
-        <h3 class="title is-4"><i class="fas fa-folder-open mr-2"></i>Resources</h3>
-        <div class="table-container">
-          <table class="table is-fullwidth is-striped">
-            <thead>
-              <tr>
-                <th>Resource</th>
-                <th>Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for resource in position.resources %}
-              <tr>
-                <td>{{ resource.name }}</td>
-                <td><span class="tag">{{ resource.type }}</span></td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-        {% endif %}
-
-        <hr>
-        <a href="{{ '/scout-portal/positions/' | relative_url }}" class="button is-outlined" style="border-color: var(--scout-primary); color: var(--scout-primary);">
-          <span class="icon"><i class="fas fa-arrow-left"></i></span>
-          <span>Back to All Positions</span>
-        </a>
-      </div>
-
-      {% else %}
-      <p>Position not found.</p>
+      {% if position.appointment %}
+      <h2>Appointment</h2>
+      <p>{{ position.appointment }}</p>
       {% endif %}
 
-    </div>
-  </section>
-</div>
+      {% if position.requirements %}
+      <h2>Requirements</h2>
+      <ul>
+        {% for req in position.requirements %}
+        <li>{{ req }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
 
-{% include auth-guard.html %}
+      <h2>Responsibilities</h2>
+      <ul>
+        {% for duty in position.responsibilities %}
+        <li>{{ duty }}</li>
+        {% endfor %}
+      </ul>
+
+      {% if position.resources.size > 0 %}
+      <h2>Resources</h2>
+      <table class="position-detail__resources">
+        <thead>
+          <tr>
+            <th>Resource</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for resource in position.resources %}
+          <tr>
+            <td>{{ resource.name }}</td>
+            <td>{{ resource.type }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endif %}
+    </div>
+
+    <div style="margin-top: 40px;">
+      <a class="btn btn-outline-dark btn-pill" href="{{ '/scout-portal/positions/' | relative_url }}">← Back to All Positions</a>
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="section band-paper">
+  <div class="md-content" style="max-width: 880px;">
+    <p>Position not found.</p>
+    <a class="btn btn-outline-dark btn-pill" href="{{ '/scout-portal/positions/' | relative_url }}">← Back to All Positions</a>
+  </div>
+</section>
+{% endif %}

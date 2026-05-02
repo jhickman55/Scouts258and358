@@ -1,106 +1,109 @@
 ---
 layout: protected
 title: Scout Portal
-subtitle: Welcome to the members-only area
+description: Members-only resources for current scouts and adult leaders.
 permalink: /scout-portal/
 ---
 
-<div class="columns is-multiline">
-  <div class="column is-4">
-    <div class="card">
-      <div class="card-content has-text-centered">
-        <span class="icon is-large has-text-primary"><i class="fas fa-calendar-alt fa-3x"></i></span>
-        <h3 class="title is-5 mt-3">Calendar</h3>
-        <p>View upcoming meetings, campouts, and events.</p>
-        <a href="{{ '/scout-portal/calendar/' | relative_url }}" class="button is-primary is-outlined mt-3">View Calendar</a>
-      </div>
-    </div>
+<section class="page-hero">
+  {% include topo-bg.html tone="mid" %}
+  <div class="page-hero__inner">
+    <div class="eyebrow eyebrow--sun">★ Members area</div>
+    <h1>Scout Portal.</h1>
+    <p class="lede">Resources, rosters, and tools for our scouts and adult leaders. Sign out when you're done from the bottom of the page.</p>
   </div>
+</section>
 
-  <div class="column is-4">
-    <div class="card">
-      <div class="card-content has-text-centered">
-        <span class="icon is-large has-text-primary"><i class="fas fa-users fa-3x"></i></span>
-        <h3 class="title is-5 mt-3">Troop Rosters</h3>
-        <p>View current troop membership.</p>
-        <div class="buttons is-centered mt-3">
-          <a href="{{ '/scout-portal/rosters/258/' | relative_url }}" class="button is-primary is-outlined is-small">258</a>
-          <a href="{{ '/scout-portal/rosters/358/' | relative_url }}" class="button is-primary is-outlined is-small">358</a>
-          <a href="{{ '/scout-portal/rosters/dinosaur/' | relative_url }}" class="button is-primary is-outlined is-small">Alumni</a>
+<section class="section band-paper">
+  <div class="portal-grid">
+    <a class="step-card" href="{{ '/scout-portal/calendar/' | relative_url }}">
+      <div class="step-card__icon">{% include icons/sun.html size="48" color="#2d4a32" %}</div>
+      <div>
+        <div class="step-card__num">№ 01</div>
+        <h3 class="step-card__title">Calendar</h3>
+        <p class="step-card__desc">Upcoming meetings, campouts, and events for the troop.</p>
+        <span class="step-card__cta">Open <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+
+    <div class="step-card">
+      <div class="step-card__icon">{% include icons/oak-leaf.html size="48" color="#2d4a32" %}</div>
+      <div>
+        <div class="step-card__num">№ 02</div>
+        <h3 class="step-card__title">Troop Rosters</h3>
+        <p class="step-card__desc">Current membership rosters by troop.</p>
+        <div class="portal-roster-buttons">
+          <a class="btn btn-pill-xs btn-outline-dark" href="{{ '/scout-portal/rosters/258/' | relative_url }}">258</a>
+          <a class="btn btn-pill-xs btn-outline-dark" href="{{ '/scout-portal/rosters/358/' | relative_url }}">358</a>
+          <a class="btn btn-pill-xs btn-outline-dark" href="{{ '/scout-portal/rosters/dinosaur/' | relative_url }}">Alumni</a>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="column is-4">
-    <div class="card">
-      <div class="card-content has-text-centered">
-        <span class="icon is-large has-text-primary"><i class="fas fa-award fa-3x"></i></span>
-        <h3 class="title is-5 mt-3">Scout Positions</h3>
-        <p>Info and resources for each leadership role.</p>
-        <a href="{{ '/scout-portal/positions/' | relative_url }}" class="button is-primary is-outlined mt-3">View Positions</a>
+    <a class="step-card" href="{{ '/scout-portal/positions/' | relative_url }}">
+      <div class="step-card__icon">{% include icons/compass.html size="48" color="#2d4a32" accent="#a8442a" %}</div>
+      <div>
+        <div class="step-card__num">№ 03</div>
+        <h3 class="step-card__title">Scout Positions</h3>
+        <p class="step-card__desc">Info and resources for each youth leadership role.</p>
+        <span class="step-card__cta">View positions <span aria-hidden="true">→</span></span>
       </div>
-    </div>
-  </div>
+    </a>
 
-  <div class="column is-4">
-    <div class="card">
-      <div class="card-content has-text-centered">
-        <span class="icon is-large has-text-primary"><i class="fas fa-medal fa-3x"></i></span>
-        <h3 class="title is-5 mt-3">Merit Badges</h3>
-        <p>Merit badge resources and tracking.</p>
-        <a href="{{ '/scout-portal/merit-badges/' | relative_url }}" class="button is-primary is-outlined mt-3">Merit Badges</a>
+    <a class="step-card" href="{{ '/scout-portal/merit-badges/' | relative_url }}">
+      <div class="step-card__icon">{% include icons/sun.html size="48" color="#e0a93b" %}</div>
+      <div>
+        <div class="step-card__num">№ 04</div>
+        <h3 class="step-card__title">Merit Badges</h3>
+        <p class="step-card__desc">Merit badge resources and tracking.</p>
+        <span class="step-card__cta">Open <span aria-hidden="true">→</span></span>
       </div>
-    </div>
-  </div>
+    </a>
 
-  <div class="column is-4">
-    <div class="card">
-      <div class="card-content has-text-centered">
-        <span class="icon is-large has-text-primary"><i class="fas fa-campground fa-3x"></i></span>
-        <h3 class="title is-5 mt-3">Camping</h3>
-        <p>Camping guides, checklists, and tips.</p>
-        <a href="{{ '/scout-portal/camping/' | relative_url }}" class="button is-primary is-outlined mt-3">Camping Info</a>
+    <a class="step-card" href="{{ '/scout-portal/camping/' | relative_url }}">
+      <div class="step-card__icon">{% include icons/tent.html size="48" color="#2d4a32" %}</div>
+      <div>
+        <div class="step-card__num">№ 05</div>
+        <h3 class="step-card__title">Camping</h3>
+        <p class="step-card__desc">Camping guides, packing checklists, and tips.</p>
+        <span class="step-card__cta">Open <span aria-hidden="true">→</span></span>
       </div>
-    </div>
-  </div>
+    </a>
 
-  <div class="column is-4">
-    <div class="card">
-      <div class="card-content has-text-centered">
-        <span class="icon is-large has-text-primary"><i class="fas fa-utensils fa-3x"></i></span>
-        <h3 class="title is-5 mt-3">Grubmaster</h3>
-        <p>Meal planning guides for campouts.</p>
-        <a href="{{ '/scout-portal/grubmaster/' | relative_url }}" class="button is-primary is-outlined mt-3">Grubmaster</a>
+    <a class="step-card" href="{{ '/scout-portal/grubmaster/' | relative_url }}">
+      <div class="step-card__icon">{% include icons/campfire.html size="48" color="#2d4a32" accent="#c25434" %}</div>
+      <div>
+        <div class="step-card__num">№ 06</div>
+        <h3 class="step-card__title">Grubmaster</h3>
+        <p class="step-card__desc">Meal planning guides and budgets for campouts.</p>
+        <span class="step-card__cta">Open <span aria-hidden="true">→</span></span>
       </div>
-    </div>
-  </div>
+    </a>
 
-  <div class="column is-4">
-    <div class="card">
-      <div class="card-content has-text-centered">
-        <span class="icon is-large has-text-primary"><i class="fas fa-book fa-3x"></i></span>
-        <h3 class="title is-5 mt-3">Training Resources</h3>
-        <p>Scout training materials and guides.</p>
-        <a href="{{ '/scout-portal/training-resources/' | relative_url }}" class="button is-primary is-outlined mt-3">Resources</a>
+    <a class="step-card" href="{{ '/scout-portal/training-resources/' | relative_url }}">
+      <div class="step-card__icon">{% include icons/mountain.html size="56" color="#2d4a32" %}</div>
+      <div>
+        <div class="step-card__num">№ 07</div>
+        <h3 class="step-card__title">Training Resources</h3>
+        <p class="step-card__desc">Scout training materials and study guides.</p>
+        <span class="step-card__cta">Open <span aria-hidden="true">→</span></span>
       </div>
-    </div>
-  </div>
+    </a>
 
-  <div class="column is-4">
-    <div class="card">
-      <div class="card-content has-text-centered">
-        <span class="icon is-large has-text-primary"><i class="fas fa-camera fa-3x"></i></span>
-        <h3 class="title is-5 mt-3">Photo Library</h3>
-        <p>Photos from troop activities and events.</p>
-        <a href="{{ '/scout-portal/photo-library/' | relative_url }}" class="button is-primary is-outlined mt-3">View Photos</a>
+    <a class="step-card" href="{{ '/scout-portal/photo-library/' | relative_url }}">
+      <div class="step-card__icon">{% include icons/oak-leaf.html size="48" color="#7a8c5c" %}</div>
+      <div>
+        <div class="step-card__num">№ 08</div>
+        <h3 class="step-card__title">Photo Library</h3>
+        <p class="step-card__desc">Photos from troop activities and events.</p>
+        <span class="step-card__cta">Open <span aria-hidden="true">→</span></span>
       </div>
-    </div>
+    </a>
   </div>
-</div>
+</section>
 
-<div class="has-text-centered mt-6">
-  <button onclick="firebase.auth().signOut().then(function() { window.location.href='{{ '/' | relative_url }}'; })" class="button is-light">
-    <i class="fas fa-sign-out-alt mr-2"></i> Sign Out
+<div class="portal-signout">
+  <button type="button" class="btn btn-outline-dark btn-pill" onclick="firebase.auth().signOut().then(function() { window.location.href='{{ '/' | relative_url }}'; })">
+    Sign out
   </button>
 </div>

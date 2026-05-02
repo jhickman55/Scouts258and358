@@ -1,31 +1,19 @@
 ---
-layout: auth
+layout: default
 ---
 
 <!-- Loading indicator while checking auth -->
-<section class="section" id="auth-loading">
-  <div class="container has-text-centered">
-    <p class="is-size-5"><i class="fas fa-spinner fa-spin"></i> Checking login...</p>
+<section class="auth-loading" id="auth-loading">
+  {% include topo-bg.html tone="dim" %}
+  <div class="auth-loading__inner">
+    <div class="spinner" aria-hidden="true"></div>
+    <div class="auth-loading__label">Checking login…</div>
   </div>
 </section>
 
 <!-- Protected content - hidden until auth is confirmed -->
 <div id="protected-content" style="display: none;">
-  <section class="section">
-    <div class="container">
-      {% if page.title %}
-      <h1 class="title is-2">{{ page.title }}</h1>
-      {% if page.subtitle %}
-      <p class="subtitle is-4">{{ page.subtitle }}</p>
-      {% endif %}
-      <hr>
-      {% endif %}
-
-      <div class="content">
-        {{ content }}
-      </div>
-    </div>
-  </section>
+  {{ content }}
 </div>
 
 {% include auth-guard.html %}

@@ -5,12 +5,14 @@
 {% assign is_calendar = false %}
 {% assign is_resources = false %}
 {% assign is_contact = false %}
+{% assign is_portal = false %}
 {% if url == '/' or url == '/index.html' %}{% assign is_home = true %}{% endif %}
 {% if url contains '/new-scout-process' %}{% assign is_newscout = true %}{% endif %}
 {% if url contains '/activities' %}{% assign is_activities = true %}{% endif %}
 {% if url contains '/calendar' %}{% assign is_calendar = true %}{% endif %}
 {% if url contains '/resources' or url contains '/training' or url contains '/payments' or url contains '/troop-store' %}{% assign is_resources = true %}{% endif %}
 {% if url contains '/contact' %}{% assign is_contact = true %}{% endif %}
+{% if url contains '/scout-portal' or url contains '/auth/login' %}{% assign is_portal = true %}{% endif %}
 
 <nav class="site-nav" role="navigation" aria-label="Primary">
   <a class="site-nav__brand" href="{{ '/' | relative_url }}">
@@ -32,6 +34,7 @@
 
   <div class="site-nav__cta">
     <button class="site-nav__burger" id="site-nav-burger" aria-controls="site-nav-links" aria-expanded="false">Menu</button>
+    <a class="site-nav__portal {% if is_portal %}site-nav__portal--active{% endif %}" href="{{ '/scout-portal/' | relative_url }}">Scout Portal</a>
     <a class="btn btn-oak" href="{{ '/contact/' | relative_url }}">Join Us</a>
   </div>
 </nav>

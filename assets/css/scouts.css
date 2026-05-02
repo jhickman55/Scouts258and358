@@ -422,6 +422,38 @@ a { color: inherit; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.site-nav__portal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1.5px solid var(--oak-700);
+  color: var(--oak-700);
+  background: transparent;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color .15s, color .15s;
+}
+.site-nav__portal::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--clay-500);
+}
+.site-nav__portal:hover {
+  background: var(--oak-700);
+  color: var(--paper-bright);
+}
+.site-nav__portal--active {
+  background: var(--oak-700);
+  color: var(--paper-bright);
+}
+.site-nav__portal--active::before { background: var(--sun-soft); }
 
 /* ──────────────────────────────────────────
    Site footer
@@ -1623,6 +1655,226 @@ a { color: inherit; }
   color: var(--oak-700);
   margin-bottom: 16px;
 }
+
+/* ──────────────────────────────────────────
+   Scout Portal — auth loader + dashboard grid
+   ────────────────────────────────────────── */
+.auth-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: var(--oak-800);
+  color: var(--limestone-200);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 24px;
+}
+.auth-loading__inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.auth-loading__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--sun-soft);
+}
+.spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid rgba(240,196,107,0.25);
+  border-top-color: var(--sun-soft);
+  animation: spin 0.9s linear infinite;
+  margin: 0 auto 14px;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: none; border-top-color: var(--sun-soft); }
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1100px) {
+  .portal-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .portal-grid { grid-template-columns: 1fr; }
+}
+
+a.step-card {
+  text-decoration: none;
+  color: inherit;
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+a.step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--oak-700);
+}
+.step-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clay-600);
+}
+
+.portal-roster-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.portal-signout {
+  display: flex;
+  justify-content: center;
+  padding: 32px 24px 64px;
+  background: var(--paper);
+}
+
+/* Position list cards (scout positions index) */
+.position-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 1100px) {
+  .position-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .position-list { grid-template-columns: 1fr; }
+}
+.position-card {
+  display: block;
+  padding: 24px;
+  background: var(--paper-bright);
+  border: 1px solid rgba(45,74,50,0.12);
+  border-left: 4px solid var(--clay-500);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: transform .15s, box-shadow .15s;
+}
+.position-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.position-card__abbr {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--limestone-100);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clay-600);
+  margin-bottom: 10px;
+}
+.position-card__title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  color: var(--oak-900);
+}
+.position-card__desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--oak-700);
+}
+
+.breadcrumb-trail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--oak-700);
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.breadcrumb-trail a {
+  color: var(--clay-600);
+  text-decoration: none;
+  transition: color .15s;
+}
+.breadcrumb-trail a:hover { color: var(--clay-500); }
+.breadcrumb-trail .sep { color: rgba(45,74,50,0.4); }
+.breadcrumb-trail .current { color: var(--oak-700); }
+
+/* Position detail content blocks */
+.position-detail__intro {
+  background: var(--limestone-100);
+  border-left: 4px solid var(--clay-500);
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--oak-900);
+  margin: 24px 0;
+}
+.position-detail__resources {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+.position-detail__resources th,
+.position-detail__resources td {
+  border: 1px solid rgba(45,74,50,0.12);
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 14px;
+}
+.position-detail__resources th {
+  background: var(--limestone-100);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--oak-700);
+}
+
+/* Coming-soon callout (used on photo library, troop store) */
+.callout {
+  background: var(--limestone-100);
+  border: 1px solid rgba(45,74,50,0.15);
+  border-left: 4px solid var(--clay-500);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  margin: 24px 0;
+}
+.callout__kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--clay-600);
+  margin-bottom: 8px;
+}
+.callout p { margin: 0; font-size: 15px; color: var(--oak-900); }
 
 /* 404 hero */
 .notfound {

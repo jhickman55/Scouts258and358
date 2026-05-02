@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Adult Resources
+subtitle: Forms, documents, and external links for parents and adult leaders.
+eyebrow: Field guide
 description: Resources for adult leaders and parents of Troops 258 & 358
 permalink: /resources/
 ---

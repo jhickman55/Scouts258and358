@@ -1,0 +1,209 @@
+---
+layout: default
+title: Calendar
+description: Weekly meetings, monthly campouts, and the big stuff. Subscribe to keep it on your phone.
+permalink: /calendar/
+---
+
+<section class="section section-tight band-paper">
+  <div class="cal-header">
+    <div>
+      <div class="eyebrow eyebrow--clay">★ The trail ahead</div>
+      <h1>Calendar.</h1>
+      <p>
+        Weekly meetings, monthly campouts, and the big stuff. Subscribe to the troop calendar
+        to keep it on your phone.
+      </p>
+    </div>
+    <div class="cal-header__actions">
+      <a class="btn btn-pill-sm btn-outline-dark" href="#" aria-disabled="true">Subscribe (.ics)</a>
+      <a class="btn btn-pill-sm btn-oak" href="#" aria-disabled="true">Add to Google</a>
+    </div>
+  </div>
+
+  <div class="cal-filters">
+    <button class="chip chip--active" type="button">All events</button>
+    <button class="chip" type="button">Meetings</button>
+    <button class="chip" type="button">Campouts</button>
+    <button class="chip" type="button">Ceremonies</button>
+    <button class="chip" type="button">Leadership</button>
+    <button class="chip" type="button">Service</button>
+  </div>
+
+  <div class="cal-grid">
+    <!-- Mini month -->
+    <div class="cal-month">
+      <div class="cal-month__head">
+        <div class="cal-month__title">May 2026</div>
+        <div class="cal-month__nav">
+          <button type="button" aria-label="Previous month">‹</button>
+          <button type="button" aria-label="Next month">›</button>
+        </div>
+      </div>
+      <div class="cal-month__dow">
+        <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+      </div>
+      <div class="cal-month__days">
+        <!-- May 2026 starts on Friday; first 5 cells are blank -->
+        <div class="cal-day cal-day--out"></div>
+        <div class="cal-day cal-day--out"></div>
+        <div class="cal-day cal-day--out"></div>
+        <div class="cal-day cal-day--out"></div>
+        <div class="cal-day cal-day--out"></div>
+        <div class="cal-day">1</div>
+        <div class="cal-day">2</div>
+        <div class="cal-day">3</div>
+        <div class="cal-day">4</div>
+        <div class="cal-day cal-day--today">5</div>
+        <div class="cal-day">6</div>
+        <div class="cal-day">7</div>
+        <div class="cal-day">8</div>
+        <div class="cal-day cal-day--has-event">9</div>
+        <div class="cal-day">10</div>
+        <div class="cal-day">11</div>
+        <div class="cal-day cal-day--has-event">12</div>
+        <div class="cal-day">13</div>
+        <div class="cal-day">14</div>
+        <div class="cal-day">15</div>
+        <div class="cal-day">16</div>
+        <div class="cal-day">17</div>
+        <div class="cal-day">18</div>
+        <div class="cal-day cal-day--has-event">19</div>
+        <div class="cal-day">20</div>
+        <div class="cal-day">21</div>
+        <div class="cal-day">22</div>
+        <div class="cal-day cal-day--has-event">23</div>
+        <div class="cal-day">24</div>
+        <div class="cal-day">25</div>
+        <div class="cal-day cal-day--has-event">26</div>
+        <div class="cal-day">27</div>
+        <div class="cal-day">28</div>
+        <div class="cal-day">29</div>
+        <div class="cal-day">30</div>
+        <div class="cal-day">31</div>
+      </div>
+      <div class="cal-legend">
+        <div class="cal-legend__title">Legend</div>
+        <div class="cal-legend__row"><span class="cal-legend__swatch" style="background: var(--sage-500);"></span>Meeting</div>
+        <div class="cal-legend__row"><span class="cal-legend__swatch" style="background: var(--oak-700);"></span>Campout</div>
+        <div class="cal-legend__row"><span class="cal-legend__swatch" style="background: var(--clay-600);"></span>Ceremony</div>
+        <div class="cal-legend__row"><span class="cal-legend__swatch" style="background: var(--sun);"></span>Service</div>
+      </div>
+    </div>
+
+    <!-- Agenda -->
+    <div class="cal-agenda">
+      <div class="cal-event cal-event--meeting">
+        <div class="cal-event__date">
+          <div class="cal-event__date-month">May</div>
+          <div class="cal-event__date-day">05</div>
+          <div class="cal-event__date-dow">Tue</div>
+        </div>
+        <div>
+          <span class="cal-event__type">Meeting</span>
+          <div class="cal-event__title">Weekly troop meeting</div>
+          <div class="cal-event__loc">Rockbridge Church · 7:00 PM</div>
+        </div>
+        <button class="btn btn-pill-sm btn-outline-dark" type="button">Details</button>
+      </div>
+
+      <div class="cal-event cal-event--campout">
+        <div class="cal-event__date">
+          <div class="cal-event__date-month">May</div>
+          <div class="cal-event__date-day">09</div>
+          <div class="cal-event__date-dow">Sat</div>
+        </div>
+        <div>
+          <span class="cal-event__type">Campout</span>
+          <div class="cal-event__title">Spring campout — Inks Lake</div>
+          <div class="cal-event__loc">Inks Lake State Park · Fri 5pm – Sun 11am</div>
+        </div>
+        <button class="btn btn-pill-sm btn-outline-dark" type="button">Details</button>
+      </div>
+
+      <div class="cal-event cal-event--ceremony">
+        <div class="cal-event__date">
+          <div class="cal-event__date-month">May</div>
+          <div class="cal-event__date-day">12</div>
+          <div class="cal-event__date-dow">Tue</div>
+        </div>
+        <div>
+          <span class="cal-event__type">Ceremony</span>
+          <div class="cal-event__title">Court of Honor + potluck</div>
+          <div class="cal-event__loc">Rockbridge Church · 7:00 PM</div>
+        </div>
+        <button class="btn btn-pill-sm btn-outline-dark" type="button">Details</button>
+      </div>
+
+      <div class="cal-event cal-event--leadership">
+        <div class="cal-event__date">
+          <div class="cal-event__date-month">May</div>
+          <div class="cal-event__date-day">19</div>
+          <div class="cal-event__date-dow">Tue</div>
+        </div>
+        <div>
+          <span class="cal-event__type">Leadership</span>
+          <div class="cal-event__title">Patrol leaders council</div>
+          <div class="cal-event__loc">Rockbridge Church · 6:00 PM</div>
+        </div>
+        <button class="btn btn-pill-sm btn-outline-dark" type="button">Details</button>
+      </div>
+
+      <div class="cal-event cal-event--service">
+        <div class="cal-event__date">
+          <div class="cal-event__date-month">May</div>
+          <div class="cal-event__date-day">23</div>
+          <div class="cal-event__date-dow">Sat</div>
+        </div>
+        <div>
+          <span class="cal-event__type">Service</span>
+          <div class="cal-event__title">Mulch fundraiser delivery day</div>
+          <div class="cal-event__loc">Cedar Park · 8:00 AM</div>
+        </div>
+        <button class="btn btn-pill-sm btn-outline-dark" type="button">Details</button>
+      </div>
+
+      <div class="cal-event cal-event--meeting">
+        <div class="cal-event__date">
+          <div class="cal-event__date-month">May</div>
+          <div class="cal-event__date-day">26</div>
+          <div class="cal-event__date-dow">Tue</div>
+        </div>
+        <div>
+          <span class="cal-event__type">Meeting</span>
+          <div class="cal-event__title">Weekly troop meeting</div>
+          <div class="cal-event__loc">Rockbridge Church · 7:00 PM</div>
+        </div>
+        <button class="btn btn-pill-sm btn-outline-dark" type="button">Details</button>
+      </div>
+
+      <div class="cal-event cal-event--campout">
+        <div class="cal-event__date">
+          <div class="cal-event__date-month">Jun</div>
+          <div class="cal-event__date-day">06</div>
+          <div class="cal-event__date-dow">Sat</div>
+        </div>
+        <div>
+          <span class="cal-event__type">Campout</span>
+          <div class="cal-event__title">Summer kickoff campout</div>
+          <div class="cal-event__loc">Lost Maples · Fri 5pm – Sun 11am</div>
+        </div>
+        <button class="btn btn-pill-sm btn-outline-dark" type="button">Details</button>
+      </div>
+
+      <div class="cal-event cal-event--camp">
+        <div class="cal-event__date">
+          <div class="cal-event__date-month">Jun</div>
+          <div class="cal-event__date-day">21</div>
+          <div class="cal-event__date-dow">Sun</div>
+        </div>
+        <div>
+          <span class="cal-event__type">Camp</span>
+          <div class="cal-event__title">Summer camp departure</div>
+          <div class="cal-event__loc">Lost Pines Scout Reservation · 1 week</div>
+        </div>
+        <button class="btn btn-pill-sm btn-outline-dark" type="button">Details</button>
+      </div>
+    </div>
+  </div>
+</section>

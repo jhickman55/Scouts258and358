@@ -1,0 +1,9 @@
+{% assign size = include.size | default: 60 %}
+{% assign color = include.color | default: 'currentColor' %}
+{% assign accent = include.accent | default: '#c25434' %}
+<svg width="{{ size }}" height="{{ size }}" viewBox="0 0 100 100" fill="none" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+  <path d="M50,20 C42,32 38,42 44,52 C48,46 48,40 50,40 C52,46 56,52 56,60 C62,52 60,38 50,20 Z" stroke="{{ accent }}" fill="{{ accent }}" fill-opacity="0.15"/>
+  <path d="M58,40 C66,52 64,62 56,68 C58,60 56,56 54,56 C52,62 50,66 46,68 C40,60 50,48 58,40 Z" stroke="{{ accent }}" fill="{{ accent }}" fill-opacity="0.1"/>
+  <path d="M20,80 L80,80" stroke="{{ color }}" stroke-width="2"/>
+  <path d="M22,80 L78,68 M22,68 L78,80" stroke="{{ color }}" stroke-width="1.8"/>
+</svg>

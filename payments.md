@@ -1,14 +1,16 @@
 ---
 layout: page
-title: Payments and Dues
+title: Payments &amp; Dues
+subtitle: Submit troop payments securely through Wave Apps.
+eyebrow: The ledger
 description: Submit payments for Scouts BSA Troops 258 & 358
 permalink: /payments/
 ---
 
-Click the button below to submit your troop dues payment securely through Wave Apps.
+Annual dues keep the troop running — meeting space, gear, awards, and the camp fund. Click below to submit your 2026 dues payment securely through Wave Apps.
 
-<div class="has-text-centered mt-5 mb-5">
-  <a href="https://link.waveapps.com/3rrrgd-j3ewxp" target="_blank" rel="noopener noreferrer" class="button is-primary is-large">
-    <i class="fas fa-credit-card mr-2"></i> Pay - 2026 Annual Troop Dues
-  </a>
+<div style="margin: 32px 0;">
+  <a class="btn btn-clay btn-pill btn-lg" href="https://link.waveapps.com/3rrrgd-j3ewxp" target="_blank" rel="noopener noreferrer">Pay 2026 Annual Troop Dues →</a>
 </div>
+
+If you need a scholarship, payment plan, or have any questions about dues, [contact troop leadership]({{ '/contact/' | relative_url }}) — we'll work with you.

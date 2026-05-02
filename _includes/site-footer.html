@@ -1,0 +1,51 @@
+<footer class="site-footer">
+  <div class="site-footer__cols">
+    <div>
+      <div class="site-footer__brand">
+        {% include icons/logo.html size="44" %}
+        <div>
+          <div class="site-footer__brand-title">Troops 258 &amp; 358</div>
+          <div class="site-footer__brand-sub">Cedar Park · Leander, TX</div>
+        </div>
+      </div>
+      <p class="site-footer__desc">
+        Youth-led scout troops chartered by the Capitol Area Council, North Shore District. Hosted by Rockbridge Church.
+      </p>
+    </div>
+
+    <div>
+      <div class="site-footer__col-title">Explore</div>
+      <ul class="site-footer__list">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/activities/' | relative_url }}">Activities</a></li>
+        <li><a href="{{ '/calendar/' | relative_url }}">Calendar</a></li>
+        <li><a href="{{ '/scout-portal/photo-library/' | relative_url }}">Photo Library</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="site-footer__col-title">Get Involved</div>
+      <ul class="site-footer__list">
+        <li><a href="{{ '/contact/' | relative_url }}">Join the Troop</a></li>
+        <li><a href="{{ '/new-scout-process/' | relative_url }}">New Scout Process</a></li>
+        <li><a href="{{ '/resources/' | relative_url }}">Adult Resources</a></li>
+        <li><a href="{{ '/training/' | relative_url }}">Training</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="site-footer__col-title">Quick Links</div>
+      <ul class="site-footer__list">
+        <li><a href="{{ '/scout-portal/' | relative_url }}">Scout Portal</a></li>
+        <li><a href="{{ '/payments/' | relative_url }}">Payments</a></li>
+        <li><a href="{{ '/troop-store/' | relative_url }}">Troop Store</a></li>
+        <li><a href="https://troops258-358.square.site/mulch-fundraiser" target="_blank" rel="noopener noreferrer">Mulch Fundraiser</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <span>&copy; {{ 'now' | date: "%Y" }} Scouts BSA Troops 258 &amp; 358 — All rights reserved</span>
+    <span>Made on the trail · Cedar Park, TX</span>
+  </div>
+</footer>

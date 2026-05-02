@@ -1,0 +1,37 @@
+{% assign url = page.url %}
+{% assign is_home = false %}
+{% assign is_newscout = false %}
+{% assign is_activities = false %}
+{% assign is_calendar = false %}
+{% assign is_resources = false %}
+{% assign is_contact = false %}
+{% if url == '/' or url == '/index.html' %}{% assign is_home = true %}{% endif %}
+{% if url contains '/new-scout-process' %}{% assign is_newscout = true %}{% endif %}
+{% if url contains '/activities' %}{% assign is_activities = true %}{% endif %}
+{% if url contains '/calendar' %}{% assign is_calendar = true %}{% endif %}
+{% if url contains '/resources' or url contains '/training' or url contains '/payments' or url contains '/troop-store' %}{% assign is_resources = true %}{% endif %}
+{% if url contains '/contact' %}{% assign is_contact = true %}{% endif %}
+
+<nav class="site-nav" role="navigation" aria-label="Primary">
+  <a class="site-nav__brand" href="{{ '/' | relative_url }}">
+    {% include icons/logo.html size="48" %}
+    <div>
+      <div class="site-nav__title">Troops 258 &amp; 358</div>
+      <div class="site-nav__sub">Cedar Park · Leander, TX</div>
+    </div>
+  </a>
+
+  <div class="site-nav__links" id="site-nav-links">
+    <a class="site-nav__link {% if is_home %}site-nav__link--active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+    <a class="site-nav__link {% if is_newscout %}site-nav__link--active{% endif %}" href="{{ '/new-scout-process/' | relative_url }}">New Scouts</a>
+    <a class="site-nav__link {% if is_activities %}site-nav__link--active{% endif %}" href="{{ '/activities/' | relative_url }}">Activities</a>
+    <a class="site-nav__link {% if is_calendar %}site-nav__link--active{% endif %}" href="{{ '/calendar/' | relative_url }}">Calendar</a>
+    <a class="site-nav__link {% if is_resources %}site-nav__link--active{% endif %}" href="{{ '/resources/' | relative_url }}">Resources</a>
+    <a class="site-nav__link {% if is_contact %}site-nav__link--active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
+  </div>
+
+  <div class="site-nav__cta">
+    <button class="site-nav__burger" id="site-nav-burger" aria-controls="site-nav-links" aria-expanded="false">Menu</button>
+    <a class="btn btn-oak" href="{{ '/contact/' | relative_url }}">Join Us</a>
+  </div>
+</nav>

@@ -1,0 +1,8 @@
+{% assign size = include.size | default: 80 %}
+{% assign color = include.color | default: 'currentColor' %}
+{% assign h = size | times: 0.6 %}
+<svg width="{{ size }}" height="{{ h }}" viewBox="0 0 100 60" fill="none" stroke="{{ color }}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+  <path d="M5,55 L25,25 L38,38 L55,12 L72,32 L85,22 L95,55 Z"/>
+  <path d="M48,18 L52,22 M55,12 L60,18 L55,22 L62,30" stroke-width="1.2"/>
+  <path d="M22,30 L25,25 L28,30" stroke-width="1.2"/>
+</svg>

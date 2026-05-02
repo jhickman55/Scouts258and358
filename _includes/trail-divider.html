@@ -1,0 +1,11 @@
+{% assign color = include.color | default: '#7a8c5c' %}
+{% assign accent = include.accent | default: '#a8442a' %}
+<div class="trail-divider" style="color: {{ color }};" aria-hidden="true">
+  <div class="rule"></div>
+  <svg width="60" height="20" viewBox="0 0 60 20">
+    <rect x="4" y="4" width="12" height="12" fill="{{ color }}"/>
+    <rect x="22" y="2" width="16" height="16" fill="{{ accent }}"/>
+    <rect x="44" y="4" width="12" height="12" fill="{{ color }}"/>
+  </svg>
+  <div class="rule"></div>
+</div>

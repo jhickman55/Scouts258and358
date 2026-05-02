@@ -29,12 +29,12 @@
     <a class="site-nav__link {% if is_activities %}site-nav__link--active{% endif %}" href="{{ '/activities/' | relative_url }}">Activities</a>
     <a class="site-nav__link {% if is_calendar %}site-nav__link--active{% endif %}" href="{{ '/calendar/' | relative_url }}">Calendar</a>
     <a class="site-nav__link {% if is_resources %}site-nav__link--active{% endif %}" href="{{ '/resources/' | relative_url }}">Resources</a>
+    <a class="site-nav__link site-nav__link--portal {% if is_portal %}site-nav__link--active{% endif %}" href="{{ '/scout-portal/' | relative_url }}">Scout Portal</a>
     <a class="site-nav__link {% if is_contact %}site-nav__link--active{% endif %}" href="{{ '/contact/' | relative_url }}">Contact</a>
   </div>
 
   <div class="site-nav__cta">
     <button class="site-nav__burger" id="site-nav-burger" aria-controls="site-nav-links" aria-expanded="false">Menu</button>
-    <a class="site-nav__portal {% if is_portal %}site-nav__portal--active{% endif %}" href="{{ '/scout-portal/' | relative_url }}">Scout Portal</a>
     <a class="btn btn-oak" href="{{ '/contact/' | relative_url }}">Join Us</a>
   </div>
 </nav>

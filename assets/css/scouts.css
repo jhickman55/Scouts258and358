@@ -422,38 +422,19 @@ a { color: inherit; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.site-nav__portal {
+.site-nav__link--portal {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 9px 16px;
-  border-radius: 999px;
-  border: 1.5px solid var(--oak-700);
-  color: var(--oak-700);
-  background: transparent;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 13px;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background-color .15s, color .15s;
 }
-.site-nav__portal::before {
+.site-nav__link--portal::before {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--clay-500);
+  flex-shrink: 0;
 }
-.site-nav__portal:hover {
-  background: var(--oak-700);
-  color: var(--paper-bright);
-}
-.site-nav__portal--active {
-  background: var(--oak-700);
-  color: var(--paper-bright);
-}
-.site-nav__portal--active::before { background: var(--sun-soft); }
 
 /* ──────────────────────────────────────────
    Site footer
